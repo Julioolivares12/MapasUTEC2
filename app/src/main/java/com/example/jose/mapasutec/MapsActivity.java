@@ -39,6 +39,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
 
+
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -52,12 +53,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
         UiSettings uiSettings = mMap.getUiSettings();
         uiSettings.setZoomControlsEnabled(true);
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-63.049092, -60.958994);
+        LatLng sydney = new LatLng(-122.0840, 37.422);
         mMap.addMarker(new MarkerOptions().position(sydney).title("esta es tu posicion").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
         float zoomlevel=16;
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,zoomlevel));
